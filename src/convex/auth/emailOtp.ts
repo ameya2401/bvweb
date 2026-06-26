@@ -3,7 +3,6 @@ import axios from "axios";
 import { alphabet, generateRandomString } from "oslo/crypto";
 
 export const emailOtp = Email({
-  // @ts-expect-error - Convex auth types might be outdated
   generateVerificationToken() {
     return generateRandomString(6, alphabet("0-9"));
   },
